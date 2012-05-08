@@ -4,10 +4,10 @@
 		<% Spree::Slide.last_five.each do |slide| %>
 			<div class="showcase-slide">
 				<div class="showcase-content">
-					<%= slide.image.present? ? image_tag(slide.image) : image_tag("http://www.placehold.it/940x470&text=Spree%20Showcase%20by%20@daemonsy") %>
+					<%= slide.image.present? ? image_tag(slide.image) : image_tag("http://www.placehold.it/#{SpreeShowcase::Config.preferences[:showcase_style].match(/\d{2,}x\d{2,}/)}&text=Spree%20Showcase%20by%20@daemonsy") %>
 				</div>
 				<div class="showcase-thumbnail">
-					<%=slide.image.present? ? image_tag(slide.image.url(:thumb)) : image_tag("http://www.placehold.it/220x110") %>
+					<%=slide.image.present? ? image_tag(slide.image.url(:thumb)) : image_tag("http://www.placehold.it/#{SpreeShowcase::Config.preferences[:thumbnail_style].match(/\d{2,}x\d{2,}/)}") %>
 					<div class="showcase-thumbnail-caption"><%= slide.thumbnail_message %></div>
 					<div class="showcase-thumbnail-cover"></div>
 					<!-- Put the caption content in a div with the class .showcase-caption -->

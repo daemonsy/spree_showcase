@@ -7,6 +7,8 @@ Spree::Core::Engine.routes.draw do
       end
     end
   end
-  match "/slidetest" => "slides#slides_test"
+  namespace :admin do
+    resource :showcase_settings
+  end
 end
 

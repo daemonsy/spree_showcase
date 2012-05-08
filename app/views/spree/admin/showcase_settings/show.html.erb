@@ -1,0 +1,16 @@
+<%= render :partial => 'spree/admin/shared/configuration_menu' %>
+<%= render :partial=>'spree/admin/shared/showcase_submenu'%>
+<h1><%= t(:showcase_settings) %></h1>
+
+<table data-hook="preferences">
+  <% @preferences.each do |key| %>
+  <tr>
+    <th scope="row"><%= t(key) %>:</th>
+    <td><%= SpreeShowcase::Config[key] %></td>
+  </tr>
+  <% end %> 
+</table>
+
+<p><%= link_to_with_icon 'edit', t(:edit), edit_admin_showcase_settings_path, :id => 'admin_showcase_settings_link' %></p>
+
+	<%= render :partial =>"spree/admin/shared/showcase_settings" %>

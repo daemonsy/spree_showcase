@@ -1,7 +1,7 @@
 class Spree::Slide < ActiveRecord::Base
   
   
-  has_attached_file :image, :styles=>{:thumb=> ["220x110#"]}
+  has_attached_file :image, :styles=>{:thumb=> ["#{SpreeShowcase::Config.thumbnail_style}"]} # Thumbnail Style is a config setting.
   
   default_scope order(:position) # Slides should always be ordered by position specified by user.
   scope :published, where(:published=>true)
