@@ -5,7 +5,7 @@ $(document).ready(function() {
 	$("#showcase").awShowcase({
 		content_width:			940,
 		content_height:			470,
-		fit_to_parent:			false,
+		fit_to_parent:			true,
 		auto:					true,
 		interval:				13000,
 		continuous:				false,
@@ -25,11 +25,11 @@ $(document).ready(function() {
 		transition:				'hslide', /* hslide/vslide/fade */
 		transition_delay:		300,
 		transition_speed:		500,
-		show_caption:			'onhover', /* onload/onhover/show */
+		show_caption:			'show', /* onload/onhover/show */
 		thumbnails:				true,
 		thumbnails_position:	'outside-last', /* outside-last/outside-first/inside-last/inside-first */
 		thumbnails_direction:	'horizontal', /* vertical/horizontal */
-		thumbnails_slidex:		0, /* 0 = auto / 1 = slide one thumbnail / 2 = slide two thumbnails / etc. */
+		thumbnails_slidex:		1, /* 0 = auto / 1 = slide one thumbnail / 2 = slide two thumbnails / etc. */
 		dynamic_height:			false, /* For dynamic height to work in webkit you need to set the width and height of images in the source. Usually works to only set the dimension of the first slide in the showcase. */
 		speed_change:			false, /* Set to true to prevent users from swithing more then one slide at once. */
 		

@@ -3,21 +3,21 @@
 		<!-- Each child div in #showcase with the class .showcase-slide represents a slide. -->
 		<% Spree::Slide.published.no_slides(SpreeShowcase::Config.number_of_slides_to_show).each do |slide| %>
 			<div class="showcase-slide">
-				<div class="showcase-content">
+				<div class="showcase-content sixteen columns alpha omega">
 					<%= link_to(slide.target_url.present? ? slide.target_url : "#") do %>
 						<%= slide.image.present? ? image_tag(slide.image) : image_tag("http://www.placehold.it/#{SpreeShowcase::Config.preferences[:showcase_style].match(/\d{2,}x\d{2,}/)}&text=Spree%20Showcase%20by%20@daemonsy") %>
 					<% end %>
 				</div>
-				<div class="showcase-thumbnail">
+				<div class="showcase-thumbnail four columns alpha omega">
 				
 						<%=slide.image.present? ? image_tag(slide.image.url(:thumb)) : image_tag("http://www.placehold.it/#{SpreeShowcase::Config.preferences[:thumbnail_style].match(/\d{2,}x\d{2,}/)}") %>
 					
 					<div class="showcase-thumbnail-caption"><%= slide.thumbnail_message %></div>
 					<div class="showcase-thumbnail-cover"></div>
-					<!-- Put the caption content in a div with the class .showcase-caption -->
-					<div class="showcase-caption">
-						<h2><%= slide.body %></h2>
-					</div>
+					<!-- daemonsy - Don't want to use captions yet. Put the caption content in a div with the class .showcase-caption -->
+					<!-- <div class="showcase-caption">
+											<h2><%= slide.body %></h2>
+										</div> -->
 				</div>
 			</div>
 		<% end %>

@@ -106,13 +106,13 @@
 		/* Styling the caption */
 		.showcase-caption
 		{
-			color: #000;
+			color: #FFF;
 			padding: 8px 15px;
 			text-align: left;
 			position: absolute;
 			bottom: 10px; left: 10px; right: 10px;
 			display: none;
-			background-image: url(../images/white-opacity-80.png);
+			background-image: url('black-opacity-80.png');
 		}
 		
 	.showcase-onepage .showcase-content
