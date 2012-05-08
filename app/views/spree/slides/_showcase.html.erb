@@ -1,23 +1,28 @@
 <div class="row">
-	<!-- Place somewhere in the <body> of your page -->
-	<div class="sixteen columns alpha omega">
-		<div class="flexslider">
-		  <ul class="slides">
-				<% Spree::Slide.published.no_slides(SpreeShowcase::Config.number_of_slides_to_show).each do |slide| %>
-					<li>
-						<%= link_to(slide.target_url.present? ? slide.target_url : "#") do %>
-							<%= slide.image.present? ? image_tag(slide.image) : image_tag("http://www.placehold.it/#{SpreeShowcase::Config.preferences[:showcase_style].match(/\d{2,}x\d{2,}/)}&text=Spree%20Showcase%20by%20@daemonsy") %>
-						<% end %>
-					</li>
-				<% end %>
-		  </ul>
+	<div class="alpha omega sixteen columns">
+		<div class="flex-container">
+			<div class="flexslider">
+			  <ul class="slides">
+					<% Spree::Slide.published.no_slides(SpreeShowcase::Config.number_of_slides_to_show).each do |slide| %>
+						<li>
+							<%= link_to(slide.target_url.present? ? slide.target_url : "#") do %>
+								<%= slide.image.present? ? image_tag(slide.image) : image_tag("http://www.placehold.it/#{SpreeShowcase::Config.preferences[:showcase_style].match(/\d{2,}x\d{2,}/)}&text=Spree%20Showcase%20by%20@daemonsy") %>
+							<% end %>
+						</li>
+					<% end %>
+			  </ul>
+			</div>
+			<div class="sixteen columns alpha omega">
+				<ul class="custom-controls">
+					<% Spree::Slide.published.no_slides(SpreeShowcase::Config.number_of_slides_to_show).each do |slide| %>
+						<li>
+							<%= link_to "#" do %>
+								<%=slide.image.present? ? image_tag(slide.image.url(:thumb)) : image_tag("http://www.placehold.it/#{SpreeShowcase::Config.preferences[:thumbnail_style].match(/\d{2,}x\d{2,}/)}",:class=>"alpha four columns") %>
+							<% end %>
+						</li>
+					<% end %>
+				</ul>
+			</div>
 		</div>
-	</div>
-</div>
-<div class="row" id="showcase-nav">
-	<% Spree::Slide.published.no_slides(SpreeShowcase::Config.number_of_slides_to_show).each do |slide| %>
-		<div class="four columns alpha">
-				<%=slide.image.present? ? image_tag(slide.image.url(:thumb)) : image_tag("http://www.placehold.it/#{SpreeShowcase::Config.preferences[:thumbnail_style].match(/\d{2,}x\d{2,}/)}") %>
-		</div>
-	<% end %>
+	</div<!-- End of alpha omega sixteen  -->
 </div>
