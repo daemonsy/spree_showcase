@@ -1,3 +1,6 @@
+//= require store/jquery.aw-showcase.min.js
+// Put your own showcase trigger here if you wish to use another JS Library.
+
 $(document).ready(function() {
 	$("#showcase").awShowcase({
 		content_width:			940,

@@ -2,11 +2,11 @@ module Spree
   module Admin
     class ShowcaseSettingsController < BaseController
      def show
-        @preferences = [:enabled, :thumbnail_style, :showcase_style ]
+        @preferences = [:enabled, :thumbnail_style, :showcase_style, :number_of_slides_to_show]
       end
      
       def edit
-        @preferences = [:enabled, :thumbnail_style, :showcase_style]
+        @preferences = [:enabled, :thumbnail_style, :showcase_style, :number_of_slides_to_show]
       end
      
       def update

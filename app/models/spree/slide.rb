@@ -5,6 +5,6 @@ class Spree::Slide < ActiveRecord::Base
   
   default_scope order(:position) # Slides should always be ordered by position specified by user.
   scope :published, where(:published=>true)
-  scope :last_five, limit(5)
+  scope :no_slides, lambda {|num| limit(num)}
   attr_accessible :name, :body, :target_url, :published, :image, :thumbnail_message
 end
