@@ -1,10 +1,10 @@
 $(document).ready(function() {
 	$("#showcase").awShowcase({
-		content_width:			960,
-		content_height:			450,
+		content_width:			940,
+		content_height:			470,
 		fit_to_parent:			false,
 		auto:					true,
-		interval:				3000,
+		interval:				13000,
 		continuous:				false,
 		loading:				true,
 		// tooltip_width:			200,
@@ -12,14 +12,14 @@ $(document).ready(function() {
 		// tooltip_icon_height:	32,
 		// tooltip_offsetx:		18,
 		// tooltip_offsety:		0,
-		arrows:					true,
-		buttons:				true,
+		arrows:					false,
+		buttons:				false,
 		btn_numbers:			false,
 		keybord_keys:		false,
 		mousetrace:				false, /* Trace x and y coordinates for the mouse */
-		pauseonover:			false,
+		pauseonover:			true,
 		stoponclick:			false,
-		transition:				'fade', /* hslide/vslide/fade */
+		transition:				'hslide', /* hslide/vslide/fade */
 		transition_delay:		300,
 		transition_speed:		500,
 		show_caption:			'onhover', /* onload/onhover/show */

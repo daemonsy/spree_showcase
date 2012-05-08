@@ -1,13 +1,13 @@
 <div class="row">
-	<div id="showcase" class="alpha sixteen columns">
+	<div id="showcase" class="sixteen columns alpha omega">
 		<!-- Each child div in #showcase with the class .showcase-slide represents a slide. -->
 		<% Spree::Slide.last_five.each do |slide| %>
 			<div class="showcase-slide">
 				<div class="showcase-content">
-					<%= image_tag slide.image %>
+					<%= slide.image.present? ? image_tag(slide.image) : image_tag("http://www.placehold.it/940x470&text=Spree%20Showcase%20by%20@daemonsy") %>
 				</div>
 				<div class="showcase-thumbnail">
-					<%= image_tag slide.image.url(:thumb) %>
+					<%=slide.image.present? ? image_tag(slide.image.url(:thumb)) : image_tag("http://www.placehold.it/220x110") %>
 					<div class="showcase-thumbnail-caption"><%= slide.thumbnail_message %></div>
 					<div class="showcase-thumbnail-cover"></div>
 					<!-- Put the caption content in a div with the class .showcase-caption -->
