@@ -5,7 +5,7 @@ module SpreeShowcase
 
       def add_javascripts
         puts %q{Copying JS assets into your app's javascripts/store directory. The file showcase.js is required by the extension and is used to activate slideshow.'}
-        copy_file "aw-showcase.js", "apps/assets/javascripts/store/showcase.js"
+        copy_file "aw-showcase.js", "app/assets/javascripts/store/showcase.js"
 
         append_file 'app/assets/javascripts/store/all.js', "//= require store/spree_showcase\n"
 
@@ -13,7 +13,7 @@ module SpreeShowcase
 
       def add_stylesheets
         puts %q{showcase.css styles are required by the extension and can be changed in anyway to fit your own _showcase.html.erb}
-        copy_file "aw-showcase.css", "apps/assets/stylesheets/store/showcase.css"
+        copy_file "aw-showcase.css", "app/assets/stylesheets/store/showcase.css"
         inject_into_file 'app/assets/stylesheets/store/all.css', " *= require store/spree_showcase\n", :before => /\*\//, :verbose => true
       end
       

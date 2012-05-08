@@ -1,21 +1,33 @@
 Spree Showcase
 ===========
 
-Introduction goes here.
+Spree Showcase is a simple extension that allows you to create the good ol' slideshow. The goal is to create a slideshow extension that makes things easy for the users and programmers. Minimal effort needed.
 
+The secondary objective is to create a slideshow template that allows most types of JS slider to be implemented easily into Spree. 
+
+Currently, this is the first iteration of the slideshow extension at v0.1. Contributors are greatly welcomed =)
+
+**Next to come:**
+- Adding sliders to different layout positions
+- Enabling more options to be customized in the Admin Menu
 
 Example
 =======
+Get a clean Spree Installation
 
-Example goes here.
+rails new spree_demo
+cd spree_demo
+spree install
+
+gem 'spree_showcase', :git=>"git://github.com/daemonsy/spree_showcase" # Into Gemfile
+
+bundle install
+rails g spree_showcase:install
 
 Testing
 -------
+No tests have been done yet. Use at your own risk! 
 
-Be sure to bundle your dependencies and then create a dummy test app for the specs to run against.
 
-    $ bundle
-    $ bundle exec rake test_app
-    $ bundle exec rspec spec
-
-Copyright (c) 2012 [name of extension creator], released under the New BSD License
+Copyright (c) 2012 Damon Aw, released under the New BSD License.
+[What is the BSD license anyway?]
