@@ -1,0 +1,26 @@
+/*
+ *= require store/flexslider
+*/
+@media only screen and (max-width: 479px) {
+	.custom-controls {
+		.four.columns {
+			width:150px;
+			margin-right:0px!important;
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.custom-controls {
+		.four.columns {
+			margin-right:15px!important; /* Sigh, to counter the quickfix below?*/
+		}
+	}
+}
+
+.custom-controls {
+	ul, li {
+		display:inline;
+	}
+	li {margin-right:20px!important;} /* TODO - This is a quick fix. I don't know why my alpha four columns don't balance.*/
+}

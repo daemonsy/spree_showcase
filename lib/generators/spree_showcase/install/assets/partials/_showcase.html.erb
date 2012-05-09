@@ -1,0 +1,28 @@
+<div class="flex-container">
+	<div class="row">
+		<div class="flexslider alpha omega sixteen columns">
+		  <ul class="slides">
+				<% Spree::Slide.published.no_slides(SpreeShowcase::Config.number_of_slides_to_show).each do |slide| %>
+					<li>
+						<%= link_to(slide.target_url.present? ? slide.target_url : "#") do %>
+							<%= slide.image.present? ? image_tag(slide.image) : image_tag("http://www.placehold.it/#{SpreeShowcase::Config.preferences[:showcase_style].match(/\d{2,}x\d{2,}/)}&text=Spree%20Showcase%20by%20@daemonsy") %>
+						<% end %>
+					</li>
+				<% end %>
+		  </ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="sixteen columns alpha omega">
+			<ul class="custom-controls">
+				<% Spree::Slide.published.no_slides(SpreeShowcase::Config.number_of_slides_to_show).each do |slide| %>
+					<li>
+						<%= link_to "#" do %>
+							<%=slide.image.present? ? image_tag(slide.image.url(:thumb),:class=>"alpha four columns") : image_tag("http://www.placehold.it/#{SpreeShowcase::Config.preferences[:thumbnail_style].match(/\d{2,}x\d{2,}/)}",:class=>"alpha four columns") %>
+						<% end %>
+					</li>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+</div>
