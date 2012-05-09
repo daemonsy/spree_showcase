@@ -1,4 +1,4 @@
-//= require store/jquery.flexslider.min
+//= require store/jquery.flexslider
 // Put your own showcase trigger here if you wish to use another JS Library.
 
 $(window).load(function() {
