@@ -21,9 +21,9 @@ Installation
 =======
 Get a clean Spree Installation
 
-```rails new spree_demo
-cd spree_demo
-spree install```
+```rails new spree_demo```
+```cd spree_demo```
+```spree install```
 
 ```gem 'spree_showcase', :git=>"git://github.com/daemonsy/spree_showcase" # Into Gemfile```
 
@@ -31,8 +31,8 @@ OR
 
 ```gem 'spree_showcase' # Ruby Gems```
 
-```bundle install
-rails g spree_showcase:install```
+```bundle install```
+```rails g spree_showcase:install```
 
 **Remember** to run ```rake assets:clean```, otherwise the javascript library might not be loaded.
 
