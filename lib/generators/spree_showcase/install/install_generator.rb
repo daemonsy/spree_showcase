@@ -59,6 +59,7 @@ module SpreeShowcase
       
       def complete
         puts "\nEverything is done! To summarize, _showcase.html.erb => HTML template, showcase.css.scss & showcase.js => assets. Edit these 3 files to fit run the slideshow."
+        puts "\nPlease run rake assets:clean (IMPORTANT) to clear any precompiled assets from fresh install of Spree."
       end
     end
   end
