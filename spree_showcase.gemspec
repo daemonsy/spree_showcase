@@ -11,8 +11,8 @@ Gem::Specification.new do |s|
   s.email     = 'daemonsy@gmail.com'
   s.homepage  = 'http://theidealweb.com'
 
-  #s.files       = `git ls-files`.split("\n")
-  #s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.files       = `git ls-files`.split("\n")
+  # s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
 
