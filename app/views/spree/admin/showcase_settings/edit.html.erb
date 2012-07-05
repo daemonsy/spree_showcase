@@ -8,7 +8,7 @@
       type = SpreeShowcase::Config.preference_type(key) %>
       <%= label_tag(key, t(key) + ': ') + tag(:br) if type != :boolean %>
       <%= preference_field_tag(key, SpreeShowcase::Config[key], :type => type) %>
-      <%= label_tag(key, t(key)) + tag(:br) if type == :boolean %>
+      <%= label_tag(key, t(key)) + tag(:br) if type == :boolean %> <br />
   <% end %>
   </fieldset>
   <p class="form-buttons" data-hook="buttons">
