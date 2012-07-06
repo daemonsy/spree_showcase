@@ -1,6 +1,9 @@
 Spree Showcase
 ===========
-
+#### For anyone who recently upgraded on the master, please pull a file from the gem, please pull a file from the lib.
+ 
+    spree_showcase/lib/generators/spree_showcase/install/assets/javascripts/store/showcase.js.erb
+    
 Spree Showcase is a simple extension that allows you to create the good ol' slideshow. The goal is to create a slideshow extension that makes things easy for the users and programmers. Minimal effort needed.
 
 The secondary objective is to create a slideshow template that allows most types of JS slider to be implemented easily into Spree. 
