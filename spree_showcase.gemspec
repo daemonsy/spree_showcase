@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_showcase'
-  s.version     = '0.5.2'
+  s.version     = '0.5.3'
   s.summary     = 'A Simple Spree Slider'
   s.description = 'A simple slider accommodator, using Flexslider as default'
   s.required_ruby_version = '>= 1.8.7'
