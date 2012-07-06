@@ -3,7 +3,7 @@ Deface::Override.new(:virtual_path => 'spree/admin/configurations/index',
                      :insert_bottom => "[data-hook='admin_configurations_menu']",
                      :text => %q{
                         <tr>
-                          <td><%= link_to 'Showcase Slider', admin_slides_path %></td>
-                          <td>Showcase Slides & Settings</td>
+                          <td><%= link_to t(:showcase_slider), admin_slides_path %></td>
+                          <td><%= t(:showcase_settings) %></td>
                         </tr> })
 
