@@ -1,0 +1,15 @@
+fr:
+  new_slide: "Ajouter une image"
+  showcase: "Diaporama"
+  slides: "Images"
+  slide: "Image"
+  showcase_slider: "Diaporama"
+  showcase_settings: "Options du diaporama"
+  edit_showcase_settings: "Edition des propriétés du diaporama"
+  body: "Corps"
+  target_url: "Cible du lien"
+  image: Image
+  thumbnail_message: "Texte de la miniature"
+  published: "Publiée"
+  new_showcase_slide: "Nouvelle image"
+  edit_showcase_slide: "Edition de l'image"
