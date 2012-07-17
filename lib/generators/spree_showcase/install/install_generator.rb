@@ -4,18 +4,7 @@ module SpreeShowcase
       source_root File.expand_path("../assets", __FILE__)
 
       def add_javascripts
-        append_file 'app/assets/javascripts/store/all.js', "//= require store/spree_showcase\n"
-        if copy_file "javascripts/store/showcase.js.erb", "app/assets/javascripts/store/showcase.js.erb"
-          puts "Copied showcase.js.erb into app/assets/javascripts/store/showcase.js.erb\n"
-        else
-          puts "[Failed] File copying showcase.js.erb => app/assets/javascripts/store/showcase.js.erb\n"
-        end
-        if copy_file "javascripts/store/jquery.flexslider.js", "app/assets/javascripts/store/jquery.flexslider.js"
-          puts "Copied jquery.flexslider.js into app/assets/javascripts/store/jquery.flexslider.js\n"
-        else
-          puts "[Failed] File copying jquery.flexslider.js => app/assets/javascripts/store/jquery.flexslider.js\n"
-        end
-        puts "Copying JS assets into your app's javascripts/store directory. The file showcase.js.erb is required by the extension and is used to activate slideshow.\n"
+        append_file 'app/assets/javascripts/store/all.js', "//= require jquery.flexslider\n"
       end
 
       def add_stylesheets
@@ -25,18 +14,11 @@ module SpreeShowcase
         else
           puts "[Failed] File copying showcase.css.scss => app/assets/stylesheets/store/showcase.css.scss\n"
         end
-        if copy_file "stylesheets/store/flexslider.css", "app/assets/stylesheets/store/flexslider.css"
-          puts "Copied flexslider into app/assets/stylesheets/store/flexslider.css. This is used for the default flexslider slider.\n" 
-        else
-          puts "[Failed] File copying flexslider.css => app/assets/stylesheets/store/flexslider.css\n"
-        end
         puts "showcase.css styles are required by the extension and can be changed in anyway to fit your own _showcase.html.erb\n"
       end
-      
 
-      
       def add_partials
-        puts %q{This partial is the template structure for displaying the slideshow.}
+        puts %q{This partial is the template structure for displaying the slideshow and also includes the settings for the JavaScript plugin.}
         if copy_file "partials/_showcase.html.erb", "app/views/spree/slides/_showcase.html.erb"
           puts "Copied Partial _showcase.html.erb into app/views/spree/slides/_showcase.html.erb\n"      
         else
