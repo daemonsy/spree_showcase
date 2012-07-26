@@ -18,14 +18,14 @@ module Spree
           },
           :bucket => ENV['S3_BUCKET']
         }
-      else
+      elsif FileTest.exists?(Rails.root.join('config','s3.yml')) 
         S3_OPTIONS = {
           :storage => 's3',
           :s3_credentials => Rails.root.join('config', 's3.yml')
         }
+      else
+        S3_OPTIONS = { :storage => 'filesystem' }
       end
-    else
-      S3_OPTIONS = { :storage => 'filesystem' }
     end
 
     attachment_definitions[:image] = (attachment_definitions[:image] || {}).merge(S3_OPTIONS)
