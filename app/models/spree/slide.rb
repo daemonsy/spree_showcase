@@ -23,8 +23,6 @@ module Spree
           :storage => 's3',
           :s3_credentials => Rails.root.join('config', 's3.yml')
         }
-      else 
-        raise("S3 Configuration not found") 
       end
     end
 
