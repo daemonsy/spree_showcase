@@ -3,3 +3,4 @@
 
 en:
   hello: "Hello world"
+  use_s3_in_production: "Use S3 in Production"

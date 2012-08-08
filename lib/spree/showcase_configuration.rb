@@ -12,6 +12,6 @@ class Spree::ShowcaseConfiguration < Spree::Preferences::Configuration
   preference :randomize, :boolean, :default => false
   preference :animation_loop, :boolean, :default => true
   preference :pause_on_hover, :boolean, :default => true
-  
+  preference :use_s3_in_production, :boolean, :default => false
 end
 
