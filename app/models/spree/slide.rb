@@ -8,27 +8,25 @@ module Spree
       :path => ':rails_root/public/spree/showcase/:id/:style/:basename.:extension'
     
     # Add S3 and Heroku support
-    if Rails.env.production?
-      if ENV['S3_KEY'] && ENV['S3_SECRET'] && ENV['S3_BUCKET']
-        S3_OPTIONS = {
-          :storage => 's3',
-          :s3_credentials => {
-            :access_key_id     => ENV['S3_KEY'],
-            :secret_access_key => ENV['S3_SECRET']
-          },
-          :bucket => ENV['S3_BUCKET']
-        }
-      elsif FileTest.exists?(Rails.root.join('config','s3.yml')) 
-        S3_OPTIONS = {
-          :storage => 's3',
-          :s3_credentials => Rails.root.join('config', 's3.yml')
-        }
-      else
-        S3_OPTIONS = { :storage => 'filesystem' }
-      end
+    s3_options = if ENV['S3_KEY'] && ENV['S3_SECRET'] && ENV['S3_BUCKET']
+      {
+        :storage => 's3',
+        :s3_credentials => {
+          :access_key_id     => ENV['S3_KEY'],
+          :secret_access_key => ENV['S3_SECRET']
+        },
+        :bucket => ENV['S3_BUCKET']
+      }
+    elsif (s3_config_file = Rails.root.join('config','s3.yml')).exist?
+      {
+        :storage => 's3',
+        :s3_credentials => s3_config_file
+      }
+    else
+      { :storage => 'filesystem' }
     end
 
-    attachment_definitions[:image] = (attachment_definitions[:image] || {}).merge(S3_OPTIONS)
+    attachment_definitions[:image] = (attachment_definitions[:image] || {}).merge(s3_options)
     
     default_scope order(:position) # Slides should always be ordered by position specified by user.
     scope :published, where(:published=>true)
