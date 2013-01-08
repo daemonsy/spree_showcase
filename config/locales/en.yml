@@ -2,4 +2,19 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  new_slide: "New Slide"
+  showcase: "Showcase"
+  slides: "Slides"
+  slide: "Slide"
+  showcase_slider: "Diaporama"
+  showcase_settings: "Showcase Settings"
+  edit_showcase_settings: "Edit Showcase Settings"
+  edit_settings: "Edit Settings"
+  edit_slide: "Editing Slide"
+  body: "Body"
+  target_url: "Target Url"
+  image: Image
+  thumbnail_message: "Thumbnail Message"
+  published: "published"
+  new_showcase_slide: "New Showcase Slide"
+  edit_showcase_slide: "Edit Showcase Slide"
