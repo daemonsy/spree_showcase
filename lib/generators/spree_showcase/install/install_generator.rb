@@ -12,6 +12,16 @@ module SpreeShowcase
         "Copy #{@source} into #{@dest}..."
       end
 
+      def add_overrides
+        @source = "overrides/showcase/add_showcase_to_home_layout.rb"
+        @dest = "app/overrides/showcase/add_showcase_to_home_layout.rb"
+        if copy_file(@source, @dest)
+          messages << copy_message
+        else
+          messages << copy_message
+        end
+      end
+
       def add_javascripts
         append_file 'app/assets/javascripts/store/all.js', "//= require jquery.flexslider\n"
         @source  = "vendor/javascripts/jquery.flexslider.js"
