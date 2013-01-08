@@ -1,6 +1,8 @@
 <%= render :partial => 'spree/admin/shared/configuration_menu' %>
 <%= render :partial=>'spree/admin/shared/showcase_submenu'%>
-<h1><%= t(:new_showcase_slide) %></h1>
+<% content_for :page_title do %>
+  <%= t(:new_showcase_slide) %>
+<% end %>
 <%= render 'spree/shared/error_messages', :target => @slide %>
 
 <%= form_for [:admin, @slide] , :html => { :multipart => true } do |f| %>
