@@ -1,17 +1,17 @@
 Spree Showcase
 ===========
 #### For anyone who recently upgraded on the master, please pull a file from the gem, please pull a file from the lib.
- 
+
     spree_showcase/lib/generators/spree_showcase/install/assets/javascripts/store/showcase.js.erb
-    
+
 Spree Showcase is a simple extension that allows you to create the good ol' slideshow. The goal is to create a slideshow extension that makes things easy for the users and programmers. Minimal effort needed.
 
-The secondary objective is to create a slideshow template that allows most types of JS slider to be implemented easily into Spree. 
+The secondary objective is to create a slideshow template that allows most types of JS slider to be implemented easily into Spree.
 
 #### Screenshot of Frontend:
 ![Screenshot of Frontend](https://github.com/downloads/daemonsy/spree_showcase/in%20action.png)
 
-#### Admin Backend: 
+#### Admin Backend:
 ![Screenshot of Backend](https://github.com/downloads/daemonsy/spree_showcase/Screen%20Shot%202012-05-09%20at%202.07.00%20AM.png)
 
 Currently, this is the first iteration of the slideshow extension at v0.5.2. Contributors are greatly welcomed =)
@@ -28,9 +28,9 @@ Get a clean Spree Installation
 ```cd spree_demo```
 ```spree install```
 
-```gem 'spree_showcase', :git=>"git://github.com/daemonsy/spree_showcase" # Into Gemfile```
+```gem 'spree_showcase'```
 
-OR 
+OR
 
 ```gem 'spree_showcase' # Ruby Gems```
 
@@ -41,7 +41,7 @@ OR
 
 Testing
 -------
-No tests have been done yet. Use at your own risk! 
+No tests have been done yet. Use at your own risk!
 
 
 Copyright (c) 2012 Damon Aw, released under the New BSD License.
