@@ -2,14 +2,14 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_showcase'
-  s.version     = '0.5.3'
+  s.version     = '0.6.0'
   s.summary     = 'A Simple Spree Slider'
   s.description = 'A simple slider accommodator, using Flexslider as default'
   s.required_ruby_version = '>= 1.8.7'
 
   s.author    = 'Damon Aw'
   s.email     = 'daemonsy@gmail.com'
-  s.homepage  = 'http://theidealweb.com'
+  s.homepage  = 'http://damon.theidealweb.com'
 
   s.files       = `git ls-files`.split("\n")
   # s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
