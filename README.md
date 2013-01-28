@@ -31,8 +31,10 @@ Get a clean Spree Installation
 
 **After That**
 
-```bundle install```
-```rails g spree_showcase:install```
+```ruby
+bundle install
+rails g spree_showcase:install
+```
 
 **Remember** to run ```rake assets:clean```, otherwise the javascript library might not be loaded.
 
