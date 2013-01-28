@@ -40,12 +40,29 @@ rails g spree_showcase:install
 
 Supports Spree 1.1 and 1.3
 
-The default Deface override is automatically added to your Project in overrides/showcase
+Display
+======
 
-The default override is to add the Showcase to the spree_application_home layout, as the top of the #wrapper div.
+The default Deface override is automatically added to your Project in 
 
-To change this location simply edit the Deface override
+    overrides/showcase/add_showcase_to_home_layout
 
+This default override acts to add the Showcase slide show to the main spree_application_home layout, 
+at the top of the #wrapper div.
+
+To change where the slide show appears, simply edit this Deface override in add_showcase_to_home_layout. 
+
+For example to add it to a home page at top of div id main-slideshow :
+
+```ruby
+Deface::Override.new(
+  :virtual_path => 'spree/home/index',
+  :name => 'add_spree_slider_to_home_index',
+  :insert_top => "#main-slideshow",
+  :partial => "spree/slides/showcase.html.erb"
+)
+
+```
 
 Testing
 -------
