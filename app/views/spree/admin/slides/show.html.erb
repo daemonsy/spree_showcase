@@ -1,34 +1,34 @@
 <%= render :partial => 'spree/admin/shared/configuration_menu' %>
 <%= render :partial=>'spree/admin/shared/showcase_submenu'%>
-<h1><%= t(:slide) %></h1>
+<h1><%= Spree.t(:slide) %></h1>
 
 <table>
   <tr data-hook="name">
-    <th><%= t(:name) %></th>
+    <th><%= Spree.t(:name) %></th>
     <td>
       <%= @slide.name %>
     </td>
   </tr>
   <tr data-hook="body">
-    <th><%= t(:body) %></th>
+    <th><%= Spree.t(:body) %></th>
     <td>
       <%= @slide.body %>
     </td>
   </tr>
   <tr data-hook="link_url">
-    <th><%= t(:target_url) %></th>
+    <th><%= Spree.t(:target_url) %></th>
     <td>
       <%= @slide.target_url %>
     </td>
   </tr>
   <tr data-hook="published">
-    <th><%= t(:published) %></th>
+    <th><%= Spree.t(:published) %></th>
     <td>
       <%= @slide.published %>
     </td>
   </tr>
   <tr data-hook="image_file_name">
-    <th><%= t(:image) %></th>
+    <th><%= Spree.t(:image) %></th>
     <td>
       <%= @slide.image_file_name %>
     </td>
@@ -36,6 +36,6 @@
 </table>
 
 <p>
-  <%= link_to_edit @slide, :class => 'edit_slide' %> <%= t(:or) %>
-  <%= link_to t(:back), collection_url %>
+  <%= link_to_edit @slide, :class => 'edit_slide' %> <%= Spree.t(:or) %>
+  <%= link_to Spree.t(:back), collection_url %>
 </p>

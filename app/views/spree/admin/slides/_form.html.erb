@@ -1,28 +1,28 @@
 <%= f.field_container :name do %>
-  <%= f.label :name, t(:name) %><br />
+  <%= f.label :name, Spree.t(:name) %><br />
   <%= f.text_field :name %>
 <% end %>
 <%= f.field_container :body do %>
-  <%= f.label :body, t(:body) %><br />
+  <%= f.label :body, Spree.t(:body) %><br />
   <%= f.text_area :body, {:cols => 60, :rows => 4, :class => 'fullwidth', :id=>:page_body} %>
 <% end %>
 
 <%= f.field_container :target_url do %>
-  <%= f.label :target_url, t(:target_url) %><br />
+  <%= f.label :target_url, Spree.t(:target_url) %><br />
   <%= f.text_field :target_url %>
 <% end %>
 
 <%= f.field_container :image do %>
-  <%= f.label :image, t(:image) %><br />
+  <%= f.label :image, Spree.t(:image) %><br />
   <%= f.file_field :image %>
 <% end %>
 
 <%= f.field_container :thumbnail_message do %>
-	<%= f.label :thumbnail_message, t(:thumbnail_message) %>
+	<%= f.label :thumbnail_message, Spree.t(:thumbnail_message) %>
 	<%= f.text_field :thumbnail_message %>
 <% end %>
 <%= f.field_container :published do %>
-  <%= f.label :is_published, t(:published) %><br />
+  <%= f.label :is_published, Spree.t(:published) %><br />
   <%= f.check_box :published %>
 <% end %>
 

@@ -1,0 +1,17 @@
+es:
+  spree:
+    new_slide: "Nuevo Slide"
+    showcase: "Showcase"
+    slides: "Slides"
+    slide: "Slide"
+    showcase_slider: "Showcase Slider"
+    showcase_settings: "Showcase Settings"
+    edit_showcase_settings: "Edit Showcase Settings"
+    edit_settings: "Editar preferencias"
+    edit_slide: "Editar Slide"
+    body: "Body"
+    target_url: "Url destino"
+    thumbnail_message: "Nombre Botón"
+    published: "Publicado"
+    new_showcase_slide: "New Showcase Slide"
+    edit_showcase_slide: "Edit Showcase Slide"
