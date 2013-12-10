@@ -6,7 +6,7 @@
 Deface::Override.new(
   :virtual_path => 'spree/layouts/spree_application',
   :name => 'add_spree_slider_to_home_index',
-  :insert_top => "#wrapper",
+  :insert_before => "#wrapper",
   :partial => "spree/slides/showcase.html.erb"
 )
 
