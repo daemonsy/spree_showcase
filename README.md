@@ -1,6 +1,8 @@
 Spree Showcase
 ===========
 
+**This library is no longer maintained. If anyone finds it useful and wishes to take over, let me know. Otherwise the code will be left here for reference.** 
+
 Spree Showcase is a simple extension that allows you to create the good ol' slideshow. The goal is to create a slideshow extension that makes things easy for the users and programmers. Minimal effort needed.
 
 The secondary objective is to create a slideshow template that allows most types of JS slider to be implemented easily into Spree.
