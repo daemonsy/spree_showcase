@@ -18,8 +18,8 @@ module SpreeShowcase
 
     config.to_prepare &method(:activate).to_proc
 
-    initializer "spree.flexi_variants.preferences", :after => "spree.environment" do |app|
-      SpreeShowcase::Config = Spree::ShowcaseConfiguration.new # TODO - investigate - Why can't I use Spree::Showcase::Config = ?
+    initializer "spree.showcase.preferences", :before => :load_config_initializers do |app|
+      SpreeShowcase::Config = Spree::ShowcaseConfiguration.new
     end
   end
 end
