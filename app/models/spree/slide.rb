@@ -28,7 +28,7 @@ module Spree
 
     attachment_definitions[:image] = (attachment_definitions[:image] || {}).merge(s3_options)
 
-    default_scope order(:position) # Slides should always be ordered by position specified by user.
+    default_scope { order(:position) } # Slides should always be ordered by position specified by user.
     scope :published, where(:published=>true)
     scope :no_slides, lambda {|num| limit(num)}
   end
